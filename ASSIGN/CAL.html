@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title> TEMPERATURE CALCULATOR</title>
+  <style>
+   body{
+      margin : auto;
+      text-align: center;
+      padding-top: 13%;
+      background-image: url(https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg);
+      background-size: 100vw 100vh;
+      background-repeat: no-repeat;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 120%;
+   }
+    #resultBox{
+      border: 1px solid black;
+      padding: 10px;
+      width: 20%;
+      margin :auto;
+      text-align: center;
+    }
+    
+    form{
+      background-color: green(0, 0, 0, 0.5);
+      box-shadow:2px 2px 15px rgba(0,0,0,0.3);
+      border-radius:10px;
+      width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 30px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  </style>
+  </head>
+
+<body>
+     <form >
+      <h1>TEMPERATURE CALCULATOR</h1>
+        <p>FROM:
+         <select id = "inputUnit">
+            <option value = "Fahrenheit"> Fahrenheit</option>
+            <option value = "Celsius"> Celsius</option>
+            <option value = "Kelvin"> Kelvin</option>
+         </select>
+        </p>
+
+        <p> TO:
+         <select id="outputUnit">
+            <option value = "Fahrenheit"> Fahrenheit</option>
+            <option value = "Celsius" > Celsius</option>
+            <option value = "Kelvin"> Kelvin</option>
+         </select>
+        </p>
+         <input type=" text" id="temperatureInput">
+
+         <button type="button" id="convertButton">CONVERT</button>
+
+         
+         <h2>RESULT:</h2>
+         <div id="resultBox" align="center"></div>
+         <p id="result"></p>
+     </form>
+
+<script>
+  document.getElementById("convertButton").addEventListener("click", function(){
+  let inputUnit = document.getElementById("inputUnit").value;
+  let outputUnit = document.getElementById("outputUnit").value;
+  let temperature = document.getElementById("temperatureInput").value;
+  let result;
+
+  switch(inputUnit){
+    case "Fahrenheit":
+      temperature = (temperature - 32) * (5/9);
+      break;
+    case "Kelvin":
+      temperature = temperature - 273.15;
+      break;
+  }
+
+  switch(outputUnit){
+    case "Fahrenheit":
+      result = (temperature * (9/5)) + 32;
+      break;
+    case "Kelvin":
+      result = temperature + 273.15;
+      break;
+    default:
+      result = temperature;
+  }
+
+  document.getElementById("resultBox").innerHTML = result + " " + outputUnit;
+
+});
+
+</script>
+</body>
+
+</html>

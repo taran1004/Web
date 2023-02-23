@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Me</title>
+        <style>
+            body{
+                background-color: blanchedalmond;
+            }
+            header {
+                background-color: #333;
+                height:60px;
+                padding: 20px;   
+                }
+                nav a {
+                  color: blanchedalmond;
+                  text-decoration: none;
+                }
+
+                nav{
+                    text-align: center;
+                    padding: 20px;
+                }
+
+            nav a:hover {
+               background-color: #444;
+            }
+
+            .divider{
+                color: blanchedalmond;
+            }
+
+            h1{
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .container{
+                display: flex;
+                justify-content: space-between;
+                padding: 50px;
+            }
+
+            .left-section{
+                width: 45%;
+                text-align: right;
+            }
+
+            .right-section{
+                width: 45%;
+                text-align: left;
+            }
+
+            input[type="text"], input[type="email"], textarea{
+                padding: 10px;
+                width: 100%;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            input[type="submit"]{
+                padding: 10px 20px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+        <header>
+            <nav>
+                <a href="Portfolio.html">HOME</a> &nbsp;&nbsp;<span class="divider">|</span> &nbsp;&nbsp;
+                <a href="About.html">ABOUT ME</a> &nbsp;&nbsp;<span class="divider">|</span> &nbsp;&nbsp;
+                <a href="resume.html">RESUME</a>&nbsp;&nbsp; <span class="divider">|</span> &nbsp;&nbsp;
+                <a href="contact.html">CONTACT ME</a>
+              </nav>
+            </header>
+
+        <h1>Contact Me</h1>
+
+        <div class="container">
+            <div class="left-section">
+                <h2>Get In Touch</h2>
+                <p>Feel free to contact me for any inquiries or collaborations.</p>
+                <p>I'll get back to you as soon as possible.</p>
+            </div>
+
+            <div class="right-section">
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" rows="6" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </
